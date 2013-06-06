@@ -1,16 +1,16 @@
 define(function(require) {
     'use strict';
 
-    var utils = require('utils')
-    var GameObject = require('GameObject')
+    var utils = require('utils');
+    var GameObject = require('GameObject');
 
     function Food(position) {
-        GameObject.call(this, [[ true ]], position, utils.randomColor()) // TODO: Can't have black food
+        GameObject.call(this, [[true]], position, utils.randomColor()); // TODO: Can't have black food
 
         // this.timeToLive = 50
     }
 
-    utils.inherit(Food, GameObject)
+    utils.inherit(Food, GameObject);
 
     // Food.prototype.update = function() {
     //     this.timeToLive--
@@ -23,5 +23,5 @@ define(function(require) {
     //     this.isDestroyed = true
     // }
 
-    return Food
+    return Food;
 })
