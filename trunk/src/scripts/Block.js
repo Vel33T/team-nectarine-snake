@@ -1,14 +1,14 @@
-define(function(require) {
+define(function (require) {
     'use strict';
 
-    var utils = require('utils')
-    var GameObject = require('GameObject')
+    var utils = require('utils');
+    var GameObject = require('GameObject');
 
     function Block(position) {
-        GameObject.call(this, [[ true ]], position, '#333')
+        GameObject.call(this, [[true]], position, '#333')
     }
 
-    utils.inherit(Block, GameObject)
+    utils.inherit(Block, GameObject);
 
-    return Block
-})
+    return Block;
+});

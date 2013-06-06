@@ -1,4 +1,4 @@
-define(function(require) {
+define(function (require) {
     'use strict';
 
     var utils = require('utils');
@@ -11,4 +11,4 @@ define(function(require) {
     utils.inherit(Ball, MovingObject);
 
     return Ball;
-})
+});

@@ -1,4 +1,4 @@
-define(function() {
+define(function () {
     'use strict';
 
     function _noop() {
@@ -6,24 +6,25 @@ define(function() {
     }
 
     function GameObject(image, position, color) {
-        this.image = image
-        this.position = position
-        this.color = color
+        this.image = image;
+        this.position = position;
+        this.color = color;
     }
 
     GameObject.prototype =
-        { get rows() {
-            return this.image.length
+        {
+            get rows() {
+                return this.image.length;
+            },
+
+            get cols() {
+                return this.image[0].length;
+            },
+
+            update: _noop,
+
+            respondToCollision: _noop
         }
 
-        , get cols() {
-            return this.image[0].length
-        }
-
-        , update: _noop
-
-        , respondToCollision: _noop
-    }
-
-    return GameObject
+    return GameObject;
 })

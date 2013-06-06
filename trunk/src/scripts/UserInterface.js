@@ -1,34 +1,33 @@
-define(function(require) {
+define(function (require) {
     'use strict';
 
     var KEY_MAP =
-        { 37: 'LEFT'
-        , 38: 'UP'
-        , 39: 'RIGHT'
-        , 40: 'DOWN'
-    }
+        {
+            37: 'LEFT',
+            38: 'UP',
+            39: 'RIGHT',
+            40: 'DOWN'
+        };
 
     function UserInterface(element) {
-        var self = this
+        var self = this;
 
-        this.input = []
+        this.input = [];
 
-        element.focus()
+        element.focus();
 
         // TODO: Add to element
-        window.addEventListener('keydown', function(e) {
-            e.preventDefault()
+        window.addEventListener('keydown', function (e) {
+            e.preventDefault();
 
-            self.input.push(KEY_MAP[e.which])
-        })
+            self.input.push(KEY_MAP[e.which]);
+        });
     }
 
     // TODO: Use events and not strings
-    UserInterface.prototype =
-        { processInput: function() {
-            return this.input.shift()
-        }
-    }
+    UserInterface.prototype = function () {
+        return this.input.shift();
+    };
 
-    return UserInterface
+    return UserInterface;
 })
