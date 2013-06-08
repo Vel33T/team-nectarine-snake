@@ -10,6 +10,8 @@ define(function (require) {
     var Food = require('Food');
     var Block = require('Block');
     var Snake = require('Snake');
+	
+	var MongoDB = require('MongoDB');
 
     var ROWS = 22;
     var COLS = 30;
