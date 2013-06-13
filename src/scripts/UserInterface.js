@@ -25,9 +25,12 @@ define(function (require) {
     }
 
     // TODO: Use events and not strings
-    UserInterface.prototype = function () {
-        return this.input.shift();
-    };
+    UserInterface.prototype =
+        {
+            processInput: function () {
+                return this.input.shift();
+            }
+        }
 
     return UserInterface;
 })
