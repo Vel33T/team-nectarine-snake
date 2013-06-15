@@ -1,9 +1,4 @@
-// Retrieve
-var MongoClient = require('mongodb').MongoClient;
-
-// Connect to the db
-MongoClient.connect("mongodb://NectarineSnakeUser:ekans@ds027618.mongolab.com:27618/nectarine-snake", function(err, db) {
-  if(!err) {
-    console.log("We are connected");
-  }
-});
+$.ajax( { url: "https://api.mongolab.com/api/1/databases/nectarine-snake/collections/scores?apiKey=SMc-LQqBYw3u5ZSYeB5h5YPjhs1sNbny",
+	data: JSON.stringify( { "x" : 1 } ),
+	type: "POST",
+	contentType: "application/json" } );
