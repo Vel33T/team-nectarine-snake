@@ -68,6 +68,7 @@ define(function (require) {
             _engine.onGameOver = function (score) {
                 console.log('game over: ' + score);
                 MongoDB.add({ "name": MongoDB.localStorageGet("username"), "score": score });
+                MongoDB.localStorageAdd("score", score);
                 //MongoDB.get(5, function (data) { console.log(data); });
             };
 
