@@ -38,6 +38,7 @@ define(function (require) {
             this.contentType = "application/json";
         },
         localStorageAdd: function (key, value) {
+            debugger
             window.localStorage.setItem(key, value);
         },
         localStorageGet: function (key) {
@@ -52,12 +53,13 @@ define(function (require) {
 
             return false;
         },
-        add: function (jsObject) {
+        add: function (jsObject, callback) {
             $.ajax({
                 url: this.url,
                 contentType: this.contentType,
                 type: "POST",
-                data: JSON.stringify(jsObject)
+                data: JSON.stringify(jsObject),
+                success: callback
             });
         },
         get: function (topCount, callback) {

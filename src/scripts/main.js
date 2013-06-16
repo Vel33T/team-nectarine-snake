@@ -10,8 +10,8 @@ define(function (require) {
     var Food = require('Food');
     var Block = require('Block');
     var Snake = require('Snake');
-	
-	var MongoDB = require('MongoDB');
+    
+    var MongoDB = require('MongoDB');
 
     var ROWS = 22;
     var COLS = 30;
@@ -67,7 +67,9 @@ define(function (require) {
 
             _engine.onGameOver = function (score) {
                 console.log('game over: ' + score);
-                MongoDB.add({ "name": MongoDB.localStorageGet("username"), "score": score });
+                MongoDB.add({ "name": MongoDB.localStorageGet("username"), "score": score }, function () {
+                    location.href = "score.html";
+                });
                 MongoDB.localStorageAdd("score", score);
                 //MongoDB.get(5, function (data) { console.log(data); });
             };
