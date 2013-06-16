@@ -52,6 +52,10 @@ define(function (require) {
             _engine.add(new Ball(Point(2, 2), Point.RIGHT));
             _engine.add(new Ball(Point(2, COLS - 3), Point.LEFT));
 
+            _engine.onGameOver = function (score) {
+                console.log('game over: ' + score);
+            };
+
             // _engine.add(new Ball(Point(2, 5), Point.DOWN))
             // _engine.add(new Ball(Point(ROWS - 3, 5), Point.UP))
         }

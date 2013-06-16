@@ -125,6 +125,11 @@ define(function (require) {
                     var self = this;
                     var input;
 
+                    if (this.controlledObject.isDestroyed) {
+                        this.onGameOver(this.controlledObject.parts.length);
+                        return;
+                    }
+
                     if (this.userInterface) {
                         input = this.userInterface.processInput()
 

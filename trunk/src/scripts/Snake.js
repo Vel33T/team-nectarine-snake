@@ -96,8 +96,7 @@ define(function (require) {
             while (utils.contains(this.parts, data.object.position))
         }
         else {
-            window.location.reload();
-            throw new Error('Game over!');
+            this.isDestroyed = true;
         }
     };
 
