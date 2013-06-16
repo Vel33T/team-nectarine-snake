@@ -1,9 +1,9 @@
 define(function (require) {
     'use strict';
 
-    var utils = require('utils');
-    var Point = require('Point');
-    var GameObject = require('GameObject');
+    var utils = require('../scripts/utils');
+    var Point = require('../scripts/Point');
+    var GameObject = require('../scripts/GameObject');
 
     function MovingObject(image, position, color, direction) {
         GameObject.apply(this, arguments);
