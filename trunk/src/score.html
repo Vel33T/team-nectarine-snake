@@ -45,36 +45,43 @@
 </head>
 
 <body>    
-    <div id="scoreWrap">
+    <div id="scoreWrap" ng-app="scoreBoard">
         <h1>Snake Top Score</h1>
-        <table id="scoreTable">
+
+        <table id="scoreTable" ng-controller="ListCtrl">
             <tr>
                 <th>rank</th>
                 <th>nickname</th>
                 <th>score</th>
             </tr>
-            <tr>
-                <td>1.</td>
-                <td>asfd</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>asfd</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>asfd</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>4.</td>
-                <td>asfd</td>
-                <td>50</td>
+
+            <tr ng-repeat="entry in entries">
+                <td>{{ $index }}</td>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.score }}</td>
             </tr>
         </table>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+
+    <script>
+        angular.module('scoreBoard', ['mongolab']);
+
+        angular.module('mongolab', ['ngResource']).
+            factory('scoreBoard', function($resource) {
+                var scoreBoard = $resource('https://api.mongolab.com/api/1/databases' +
+                    '/nectarine-snake/collections/scores/:id',
+                    { apiKey: 'SMc-LQqBYw3u5ZSYeB5h5YPjhs1sNbny' } 
+                );
+
+                return scoreBoard;
+            });
+
+        function ListCtrl($scope, scoreBoard) {
+            $scope.entries = scoreBoard.query({l: '5', s: '{score:-1}'});
+        }
+    </script>
 </body>
 </html>
-s
