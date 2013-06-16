@@ -52,8 +52,23 @@ define(function (require) {
             _engine.add(new Ball(Point(2, 2), Point.RIGHT));
             _engine.add(new Ball(Point(2, COLS - 3), Point.LEFT));
 
+            // _engine.add(new Ball(Point(2, 5), Point.DOWN))
+            // _engine.add(new Ball(Point(ROWS - 3, 5), Point.UP))
+        }
+
+        function _makeEnviroment() {
+            // _engine.add(new Block(Point(COLS / 2 - 1, COLS / 2 - 1)))
+
+            _engine.add(new Food(Point(ROWS / 2, 20)));
+
+            _engine.add(new Ball(Point(5, 5), Point(1, 1)));
+            _engine.add(new Ball(Point(2, 2), Point.RIGHT));
+            _engine.add(new Ball(Point(2, COLS - 3), Point.LEFT));
+
             _engine.onGameOver = function (score) {
                 console.log('game over: ' + score);
+                MongoDB.add({ "name": MongoDB.localStorageGet("username"), "score": score });
+                //MongoDB.get(5, function (data) { console.log(data); });
             };
 
             // _engine.add(new Ball(Point(2, 5), Point.DOWN))
@@ -69,7 +84,15 @@ define(function (require) {
         };
     }());
 
-    init();
-    make();
-    _engine.run();
+    $(".btn").on("click", function (username) {
+        MongoDB.localStorageAdd("username", $("#username").val());
+    });
+
+    $('#myModal').modal('show');
+        
+    $('#myModal').on('hidden', function () {
+        init();
+        make();
+        _engine.run();
+    });
 })
