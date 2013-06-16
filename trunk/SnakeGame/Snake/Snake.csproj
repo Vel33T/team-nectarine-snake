@@ -59,11 +59,22 @@
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
     <Content Include="index.html" />
-    <Content Include="point-tests.html" />
-    <Content Include="QUnit\qunit-1.11.0.css" />
-    <Content Include="QUnit\qunit-1.11.0.js" />
+    <Content Include="tests\index.html" />
+    <Content Include="tests\QUnit\qunit-1.11.0.css" />
+    <Content Include="tests\QUnit\qunit-1.11.0.js" />
     <Content Include="score.html" />
-    <Content Include="scripts-tests\point-tests.js" />
+    <Content Include="tests\scripts\Ball.js" />
+    <Content Include="tests\scripts\Block.js" />
+    <Content Include="tests\scripts\bootstrap-modal.js" />
+    <Content Include="tests\scripts\Engine.js" />
+    <Content Include="tests\scripts\Food.js" />
+    <Content Include="tests\scripts\GameObject.js" />
+    <Content Include="tests\scripts\main.js" />
+    <Content Include="tests\scripts\MongoDB.js" />
+    <Content Include="tests\scripts\MovingObject.js" />
+    <Content Include="tests\scripts\Point.js" />
+    <Content Include="tests\scripts\Renderer.js" />
+    <Content Include="tests\scripts\Snake.js" />
     <Content Include="scripts\Ball.js" />
     <Content Include="scripts\Block.js" />
     <Content Include="scripts\bootstrap-modal.js" />
@@ -78,6 +89,8 @@
     <Content Include="scripts\Snake.js" />
     <Content Include="scripts\UserInterface.js" />
     <Content Include="scripts\utils.js" />
+    <Content Include="tests\scripts\UserInterface.js" />
+    <Content Include="tests\scripts\utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
