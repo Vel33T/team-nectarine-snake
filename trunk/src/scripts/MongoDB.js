@@ -38,7 +38,6 @@ define(function (require) {
             this.contentType = "application/json";
         },
         localStorageAdd: function (key, value) {
-            debugger
             window.localStorage.setItem(key, value);
         },
         localStorageGet: function (key) {
