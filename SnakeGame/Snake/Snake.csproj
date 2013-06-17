@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="scripts\css\bootstrap.css" />
     <Content Include="index.html" />
+    <Content Include="scripts\score-main.js" />
     <Content Include="tests\index.html" />
     <Content Include="tests\QUnit\qunit-1.11.0.css" />
     <Content Include="tests\QUnit\qunit-1.11.0.js" />
