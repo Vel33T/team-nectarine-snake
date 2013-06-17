@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\bootstrap.css" />
+    <Content Include="scripts\css\bootstrap.css" />
     <Content Include="index.html" />
     <Content Include="tests\index.html" />
     <Content Include="tests\QUnit\qunit-1.11.0.css" />
