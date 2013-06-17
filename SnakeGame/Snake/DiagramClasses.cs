@@ -36,4 +36,20 @@ namespace Snake
     public abstract class MovingObject
     {
     }
+
+    public class Engine
+    {
+    }
+
+    public class MongoDB
+    {
+    }
+
+    public class Renderer
+    {
+    }
+
+    public class UserInterface
+    {
+    }
 }

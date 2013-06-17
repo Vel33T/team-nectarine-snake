@@ -49,5 +49,33 @@
       <FileName>DiagramClasses.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Snake.Engine">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagramClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.MongoDB">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagramClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.Renderer">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagramClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.UserInterface">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagramClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
