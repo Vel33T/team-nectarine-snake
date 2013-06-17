@@ -5,23 +5,19 @@ using System.Web;
 
 namespace Snake
 {
-    public class DiagramClasses
+    public class Ball : MovingObject
     {
     }
 
-    public class Ball
+    public class Block : GameObject
     {
     }
 
-    public class Block
+    public class Food : GameObject
     {
     }
 
-    public class Food
-    {
-    }
-
-    public class Snake
+    public class Snake : GameObject
     {
     }
 
@@ -33,7 +29,7 @@ namespace Snake
     {
     }
 
-    public abstract class MovingObject
+    public abstract class MovingObject : GameObject
     {
     }
 

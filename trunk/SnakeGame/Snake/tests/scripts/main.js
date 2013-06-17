@@ -108,25 +108,25 @@ define(function (require) {
     });
 
     // MongoDB tests // problem - callback scope
-    //test("Is the top 5 result really in descending order", function () {
-    //    var isItTrue = true;
-    //    MongoDB.get(5, function (data) {
-    //        for (var i = 0; i < data.length; i++) {
-    //            for (var j = 1; j < data.length; j++) {
-    //                if (data[i].score < data[j].score) {
-    //                    isItTrue = false;
-    //                    break;
-    //                }
-    //            }
+    test("Is the top 5 result really in descending order", function () {
+        var isItTrue = true;
+        MongoDB.get(5, function (data) {
+            for (var i = 0; i < data.length; i++) {
+                for (var j = 1; j < data.length; j++) {
+                    if (data[i].score < data[j].score) {
+                        isItTrue = false;
+                        break;
+                    }
+                }
 
-    //            if (!isItTrue) {
-    //                break;
-    //            }
-    //        }
-    //    });
+                if (!isItTrue) {
+                    break;
+                }
+            }
+        });
 
-    //    ok(isItTrue);
-    //});
+        ok(isItTrue);
+    });
 
     //test("Is the returned results equal to the asked", function () {
     //    var expected = 10;
