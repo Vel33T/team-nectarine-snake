@@ -1,5 +1,4 @@
 # team-nectarine-snake
-Automatically exported from code.google.com/p/team-nectarine-snake
 
 Telerik Avademy teamwork project for "JavaScript Applications" course.
 
