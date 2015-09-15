@@ -1,0 +1,1 @@
+Telerik Academy JavaScript teamwork project.
